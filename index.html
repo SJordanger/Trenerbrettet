@@ -958,6 +958,7 @@
       <div hidden aria-hidden="true"><button id="settingsRefresh" type="button"></button><button id="settingsInvites" type="button"></button><div id="settingsStatus"></div><div id="settingsTeams"></div><div id="settingsInvitations"></div></div>
     </div>
   </details>
+  <details class="settings-fold" id="settingsManageTeamsFold"><summary><span class="settings-fold-icon">🗂</span><span class="settings-fold-label"><strong>Administrer lag</strong><small>Navn, arkivering og sletting</small></span><span class="settings-chevron">⌄</span></summary><div class="settings-fold-content"><p class="settings-info">Arkivering skjuler laget uten å slette data. Skytilknyttede lag kan ikke slettes lokalt.</p><div id="v86TeamsManageList" class="settings-teams-list"></div></div></details>
   <details class="settings-fold" id="settingsFormatsFold">
     <summary><span class="settings-fold-icon">⚽</span><span class="settings-fold-label"><strong>Spillformer</strong><small id="settingsFormatsSummary">Aktive spillformer</small></span><span class="settings-chevron">⌄</span></summary>
     <div class="settings-fold-content">
@@ -3611,9 +3612,16 @@ const currentFormationPositions = () => formations[state.formation] || formation
     if(state.home===name)state.home=clean;
     save();renderAll();renderTeamDialog();paintTeamPicker();
   }
+  const v86ArchiveKey='trenerbrettet-archive-v86';
+  function v86Archived(){try{return JSON.parse(localStorage.getItem(v86ArchiveKey)||'[]')}catch(e){return []}}
+  function v86IsArchived(name){return v86Archived().includes(state.teamIdentity?.[name]||name)}
+  function v86ToggleArchive(name){if(isMatchBusy()){alert('Avslutt kampen først.');return}const id=state.teamIdentity?.[name]||name;const a=v86Archived().filter(x=>x!==id);if(!v86IsArchived(name))a.push(id);localStorage.setItem(v86ArchiveKey,JSON.stringify(a));if(v86IsArchived(name)&&state.home===name){const next=Object.keys(state.teams||{}).find(n=>!v86IsArchived(n));if(next)selectTeam(next)}paintTeamPicker();v86RenderTeams()}
+  function v86DeleteLocalTeam(name){if(isMatchBusy()){alert('Avslutt kampen først.');return}if(teamIdForLocal(name)&&accountUser){alert('Dette laget er koblet til skyen. Sletting er sperret til skydata og tilgangsrettigheter kan håndteres trygt. Du kan arkivere laget.');return}const id=state.teamIdentity?.[name]||name;const matches=(state.matches||[]).filter(m=>m.home===name||m.teamId===id).length;if(matches){alert('Laget har '+matches+' registrerte kamper. Bruk Arkiver for å bevare historikken.');return}if(!confirm('Slette laget «'+name+'» og spillerlisten permanent fra denne enheten?'))return;delete state.teams[name];if(state.teamIdentity)delete state.teamIdentity[name];if(state.home===name){state.home='Mitt lag';state.players=[]}save();renderAll();paintTeamPicker();v86RenderTeams()}
+  function v86RenderTeams(){const host=document.getElementById('v86TeamsManageList');if(!host)return;host.replaceChildren();for(const name of Object.keys(state.teams||{})){const row=document.createElement('div');const heading=document.createElement('strong');heading.textContent=name+(v86IsArchived(name)?' (arkivert)':'');row.append(heading);for(const [label,fn] of [['Endre navn',()=>{renameTeam(name);v86RenderTeams()}],[v86IsArchived(name)?'Gjenopprett':'Arkiver',()=>v86ToggleArchive(name)],['Slett',()=>v86DeleteLocalTeam(name)]]){const b=document.createElement('button');b.type='button';b.className='btn';b.textContent=label;b.addEventListener('click',fn);row.append(b)}host.append(row)}}
+  document.getElementById('settingsManageTeamsFold')?.addEventListener('toggle',v86RenderTeams);
   function paintTeamPicker() {
     const list=$('teamPickerList');list.replaceChildren();
-    const names=Object.keys(state.teams||{}).filter(n=>n&&n!=='Mitt lag'&&n!=='Nytt lag');
+    const names=Object.keys(state.teams||{}).filter(n=>n&&n!=='Mitt lag'&&n!=='Nytt lag'&&!v86IsArchived(n));
     for(const name of names){
       const btn=document.createElement('button');btn.type='button';
       btn.className='team-choice'+(name===state.home?' active':'');btn.textContent=name;
