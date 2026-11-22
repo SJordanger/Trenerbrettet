@@ -1,0 +1,1 @@
+v74: Kompakt toppmeny: stor Hjem-knapp til venstre, midtstilt logo og skjult Klar-status. Min konto: profilkort, passordpanel ved behov, glemt passord og tydelig utlogging. Databasetest under Innstillinger > Feilsoking. Kampmotor og synkronisering uendret.

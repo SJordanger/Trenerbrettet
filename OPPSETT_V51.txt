@@ -1,0 +1,14 @@
+Trenerbrettet v51 – husk innlogging
+
+Dette er en oppdatering av versjon 50.
+- Startside viser «Kontrollerer innlogging» mens lagret Supabase-økt gjenopprettes.
+- Ved gyldig økt vises «Min konto» uten å be om ny e-post.
+- Supabase oppbevarer normalt innloggingsøkt i nettleserlagringen, og fornyer den automatisk.
+- Ved retur fra bakgrunnen prøver appen å hente eksisterende økt, ikke sende e-post.
+- Logg ut er fremdeles et aktivt, eksplisitt valg.
+- Eksisterende funksjon for manuell skyoverføring av lag/spillere fra v50 er beholdt.
+- Kamper og rapporter er fremdeles lagret lokalt.
+
+VIKTIG PÅ IPHONE: Safari, hjemmeskjerm-appen og innebygde nettlesere (som chat-apper) kan ha forskjellig lagring. Logg inn fra den nettleseren/appen du vil bruke fast; e-postlenken bør åpnes i samme miljø. Sletting av nettleserdata, privat modus, utlogging eller utløpt/tilbakekalt økt kan kreve ny lenke.
+
+Netlify: Pakk ut ZIP og deploy samme nettstedsrot som tidligere. Sikkerhetskopier viktige lokale kampdata før oppdatering.

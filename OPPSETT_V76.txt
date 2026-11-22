@@ -1,0 +1,1 @@
+Trenerbrettet v76: Avanserte innstillinger er lukket ved aapning. Feilsoeking er lukket som standard. Bekreft lokale endringer vises bare ved registrert synkroniseringskonflikt. Kun en synlig knapp for Test databasetilkobling. Ingen endringer i kampmotor eller datamodell.

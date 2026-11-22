@@ -1,0 +1,6 @@
+Trenerbrettet v65
+- Min konto: Opprett første passord / nullstill passord med sikker e-postlenke.
+- Passordgjenoppretting: Krever ikke gammelt passord ved PASSWORD_RECOVERY.
+- Lagdata, sky-synk og trenerinvitasjoner er samlet under Innstillinger.
+- Kampformat, formasjoner og posisjonering er uendret fra v64.
+- Kontroller Supabase redirect URL og test e-postflyten med eksisterende konto.

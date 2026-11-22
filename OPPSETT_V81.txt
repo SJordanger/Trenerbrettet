@@ -1,0 +1,6 @@
+Trenerbrettet v81
+- Motstander låses etter kampstart, også ved pause og ferdig kamp.
+- Ny kamprapport med resultattavle, måltidslinje, spilletidskort, sammenleggbar spillerstatistikk og detaljvisning per spiller.
+- Evaluering kan redigeres, lagring og deling beholdt.
+- Posisjonstider vises normalisert mot total spilletid for eldre rapporter uten å endre lagrede rådata.
+- Kampmotor, formasjoner og spillerbytter uendret.

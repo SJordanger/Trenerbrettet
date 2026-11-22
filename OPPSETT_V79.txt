@@ -1,0 +1,1 @@
+v79: Kampstyring tilpasset kampstatus; tydeligere byttebeskjed og bekreftelse; bedre lesbarhet og mer fremtredende Angre. Formasjoner og kampmotor beholdt fra v78.

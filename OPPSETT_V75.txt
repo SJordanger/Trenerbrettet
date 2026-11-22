@@ -1,0 +1,2 @@
+Trenerbrettet v75
+Innstillinger er organisert i tre sammenleggbare seksjoner: Lag og trenere, Spillformer og Avanserte innstillinger. Eksisterende funksjoner og data er beholdt.

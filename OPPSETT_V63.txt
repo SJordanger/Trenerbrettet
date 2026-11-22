@@ -1,0 +1,1 @@
+Versjon 63: Symmetrisk posisjonsplassering i alle sju 11-erformasjoner. 4-4-2 og 4-5-1 skiller brede midtbanespillere (LM/RM) fra sentrale midtbanespillere (M). Sentrale midtstoppere, DM, M, OM og spisser fordeles symmetrisk. Ingen SQL-endring. Test i Netlify.

@@ -1,0 +1,2 @@
+Trenerbrettet v61 – faste taktiske soner i 11-er.
+F/M/DM/OM/A organiseres symmetrisk etter antall spillere (1 i midten, 2 ved siden av hverandre, 3 med en i midten). Wingback og winger bruker faste sideplasser. Posisjonsstatistikk: WB=F, DM/OM=M, W=A. Ingen ny SQL.

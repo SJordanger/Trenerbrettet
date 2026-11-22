@@ -1,0 +1,1 @@
+Trenerbrettet v82: Midtstilt overskrift Kamprapport, lukkeknapp i fast topp, kompakte kamphendelser, sammenleggbar evaluering og spillerstatistikk, faste lagre- og delknapper. Ingen endringer i kampmotor eller synkronisering.

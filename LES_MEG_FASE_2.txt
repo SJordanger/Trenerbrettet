@@ -1,0 +1,23 @@
+TRENERBRETTET V46 - FASE 2: BRUKERKONTOER
+
+VERSJON 45 viderefort; ny Konto-knapp med e-postinnlogging via Supabase.
+LAG OG KAMPER LAGRES FORTSATT LOKALT. Ingen automatisk skyopplasting!
+
+1. Ta sikkerhetskopi i eksisterende app for oppdatering.
+2. Opprett et Supabase-prosjekt: https://supabase.com/dashboard
+   Velg helst en EU-region.
+3. I Supabase SQL Editor, kjor SUPABASE_SETUP_V46.sql.
+4. Supabase -> Authentication -> Providers -> Email: skru pa e-post/OTP.
+5. Authentication -> Email Templates -> Magic Link: bruk {{ .Token }} for seks-/aatte-sifret kode, ikke bare {{ .ConfirmationURL }}.
+6. Authentication -> URL Configuration: sett Site URL til https://fotballcoach.netlify.app og legg til tillatt redirect https://fotballcoach.netlify.app/** (for magic link fallback).
+7. Project Settings -> API / Connect: kopier Project URL og publishable key (eventuelt legacy anon key).
+8. Aapne supabase-config.js og erstatt plassholderne. ALDRI service_role eller secret key.
+9. Pakk mappen Trenerbrettet_webapp og last opp innholdet som et deploy til Netlify.
+10. Aapne Trenerbrettet -> Konto -> send kode -> skriv kode -> logg inn.
+
+NB: Hvis du publiserer ZIP-en uten a endre supabase-config.js fungerer appen fortsatt lokalt, men Konto viser at innlogging ikke er konfigurert.
+NB: Test pa en annen enhet for aa bekrefte konto, men lag og kamper vil forelopig IKKE folge med. Det kommer i fase 3/4.
+NB: SDK for Supabase laster fra jsDelivr ved forste Konto-innlogging; nett kreves for innlogging. Selve kampen kan fortsatt brukes lokalt.
+NB: Beskytt brukerdata etter gjeldende personvernregler for barn foer skyimport.
+
+Versjon 47: Ny startside med Logg inn, Kampdag, Trening (kommer senere) og Innstillinger (kommer senere). Kampdag er viderefort v46. Supabase krever fortsatt egen konfigurasjon.

@@ -1,0 +1,2 @@
+const {reply,db,body,validToken}=require('./_shared');
+exports.handler=async event=>{if(event.httpMethod!=='POST')return reply(405,{error:'Method not allowed'});try{const {token,endpoint}=body(event);if(!validToken(token)||typeof endpoint!=='string')return reply(400,{error:'Ugyldig forespoersel'});const {error}=await db().from('tb_push_subscriptions').delete().eq('token',token).eq('endpoint',endpoint);if(error)throw error;return reply(200,{ok:true});}catch{return reply(500,{error:'Kunne ikke deaktivere'});}};

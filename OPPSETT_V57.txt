@@ -1,0 +1,1 @@
+Trenerbrettet v57: 3-er er aktivert med tre utespillere, ingen keeper. Formasjoner: 3 (midtbanen), 2-1 (forsvar/angrep), 1-1-1 (forsvar/midt/angrep). Standard: 2 x 15 minutter. Andre spillformer, innlogging og synkronisering er viderefort. Ingen ny SQL er nodvendig.

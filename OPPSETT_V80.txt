@@ -1,0 +1,1 @@
+v80: Fjernet informasjonsfeltet over innbytterne (byttevalg, byttebekreftelse og forklaring om spilletidsfarger). Valgt spiller markeres fortsatt visuelt. Alle bytter, angre og spilletidsberegning beholdes.

@@ -1,0 +1,1 @@
+v69: Kampdag viser bare aktive spillformer i iOS Safari. Valglisten bygges fra lagrede innstillinger og oppdateres ved åpning. Ved bare én aktiv spillform er velgeren deaktivert. Ingen endring i formasjoner eller kampmotor.

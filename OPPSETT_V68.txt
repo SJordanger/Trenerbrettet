@@ -1,0 +1,2 @@
+Trenerbrettet v68
+Kampdag: spillformvelgeren viser kun aktive spillformer. Ved kun en aktiv spillform er velgeren deaktivert og viser kun gjeldende format. Under paagaaende kamp er spillform laast. Innstillinger og lagrede valg fra v67 beholdes.

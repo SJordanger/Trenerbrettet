@@ -1,0 +1,15 @@
+TRENERBRETTET V49 – E-POSTINNLOGGING MED SUPABASE
+
+Denne versjonen er konfigurert med Supabase Project URL og offentlig publishable key.
+
+1. Ta sikkerhetskopi av lokale data i den eksisterende appen foer oppdatering.
+2. I Supabase: Authentication > URL Configuration: Site URL og Redirect URLs til https://fotballcoach.netlify.app/
+3. I Supabase: Authentication > Sign In / Providers: Email skal vaere aktivert. Standard e-postmal for Magic Link benyttes.
+4. I Supabase: SQL Editor: kjoer SUPABASE_SETUP_V46.sql (kun hvis den ikke allerede er kjoert).
+5. Distribuer ZIP-innholdet som nettsted i Netlify Deploys.
+6. Aapne Trenerbrettet > Logg inn > skriv e-post > Send innloggingslenke. Aapne e-post paa samme telefon, trykk paa lenken.
+7. Test at innloggingen gjenopprettes ved aa laste inn appen paa nytt. Test deretter Test databasetilkobling.
+
+Kampdata sendes IKKE til Supabase i denne versjonen. Lag/spillere/rapporter ligger fortsatt lokalt.
+Offentlig publishable key kan ligge i klientkode, MEN aldri service_role/secret/databasepassord.
+Supabase sin innebygde e-postsending er begre nset for tester; egen SMTP maa vurderes foer deling med flere trenere.

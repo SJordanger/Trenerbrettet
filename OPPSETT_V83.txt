@@ -1,0 +1,1 @@
+V83: Kjor SUPABASE_LIVE_V83.sql i Supabase SQL Editor for du publiserer ZIP til Netlify. Krever innlogging og lagtilgang. Klikk Del livekamp pa Kampdag. Del lenken til live.html med foreldre. Ingen spillerstatistikk deles. Lenken er en hemmelig tilgangsnokkel og kan videresendes.

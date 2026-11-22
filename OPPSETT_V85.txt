@@ -1,0 +1,21 @@
+TRENERBRETTET V85 - RETTELSER
+
+1. Supabase -> SQL Editor: kjoer SUPABASE_V85.sql. Forventet svar: Success. No rows returned.
+2. Netlify: deploy ZIP som foer. Miljoevariabler fra v84 beholdes uendret.
+3. Be alle trenere aapne appen paa nytt, slik at v85 lastes.
+
+ENDRINGER
+- Gjenopprettet kamp: Hvis appen lukkes mens kampen pagaar, faar treneren valget om aa telle med
+  tiden appen var lukket. Tiden begrenses til gjenstaaende tid i omgangen.
+- Livedeling: Navn paa maalscorere er AV som standard. Treneren maa krysse av aktivt.
+- Livelenker utloeper 6 timer etter at kampen er avsluttet, og senest 7 dager etter opprettelse.
+- Maalvarsler sendes 30 sekunder etter registrering. Et maal som angres eller slettes innen
+  30 sekunder, sendes ikke. Rettet maalscorer innen 30 sekunder kommer med i varselet.
+- Push-funksjonen kalles bare naar et nytt maal er klart, ikke ved hver lagring.
+- Livesiden har eget hjemskjermikon «Foelg kampen» som aapner riktig kamp (ny funksjon live-manifest).
+
+MAA TESTES PAA IPHONE
+- Legg livelenken til paa hjemskjermen, aapne ikonet og kontroller at kampen vises.
+- Aktiver varsler fra ikonet, registrer et maal og kontroller at varselet kommer etter ca. 30-45 sekunder.
+- Registrer et maal og angre innen 30 sekunder. Det skal ikke komme varsel.
+- Start en kamp, lukk appen helt (sveip opp), aapne etter 2 minutter og velg OK. Spilletiden skal oeke med ca. 2 minutter.

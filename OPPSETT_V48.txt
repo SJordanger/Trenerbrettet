@@ -1,0 +1,16 @@
+TRENERBRETTET V48 - SUPABASE LOGIN OG DATABASETEST
+
+1. Ta sikkerhetskopi av lag og kamper i eksisterende Trenerbrettet før publisering.
+2. Opprett prosjekt hos https://supabase.com/dashboard (velg EU-region).
+3. Under SQL Editor: kjør SUPABASE_SETUP_V46.sql (en gang i et nytt prosjekt).
+4. Authentication > Providers > Email: aktiver e-post.
+5. Authentication > Email Templates > Magic Link / OTP: send en kode i e-posten ved a inkludere {{ .Token }} i malens innhold. Standard malen sender ellers en lenke.
+6. Authentication > URL Configuration: Site URL = https://fotballcoach.netlify.app og legg til nettadressen som tillatt redirect.
+7. Kopier Project URL og publishable key fra Supabase-prosjektet. Rediger supabase-config.js og erstatt begge plassholderne.
+8. Pakk den KONFIGURERTE mappen Trenerbrettet_webapp som ZIP (index.html skal ligge pa toppniva ved deploy), og deploy via Netlify.
+9. Pa startsiden: Logg inn > skriv e-post > Send kode > skriv koden > Logg inn.
+10. I Kontovinduet: Test databasetilkobling. Meldingen bekrefter at brukerprofilen kan leses.
+
+SIKKERHET: Bruk kun offentlig publishable/anon key i nettleseren, aldri service_role/secret key. Beskytt public-tabeller med RLS.
+NB: Dette oppsettet verifiserer innlogging og tilgang til brukerprofil i databasen. Lag, spillerstall og kamper forblir forelopig lokalt lagret. Delte lag og synkronisering kommer i egne faser.
+NB: Test pa iPhone med ekte Supabase-prosjekt. E-postlevering kan kreve egen SMTP-leverandor ved lansering til mange trenere.

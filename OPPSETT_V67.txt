@@ -1,0 +1,1 @@
+Trenerbrettet v67: Spillformer kan aktiveres og deaktiveres under Innstillinger. Minst én må være aktiv. Valget lagres lokalt per enhet. Pågående kamp påvirkes ikke. Ingen endringer i formasjoner, posisjoner eller Supabase.

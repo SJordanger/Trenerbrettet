@@ -1,0 +1,1 @@
+v78: Lag og tropp sorteres med aktive spillere foerst, deretter stigende draktnummer. Sorteres ved avhuking og nummerendring. Ingen endringer i kampmotor eller formasjoner.

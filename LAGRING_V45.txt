@@ -1,0 +1,26 @@
+TRENERBRETTET V45 - LAGRING
+
+Denne versjonen forbereder appen for senere brukerinnlogging og delte lag.
+Ingen data sendes til skyen i versjon 45.
+
+NY STRUKTUR
+- trenerbrettet-data-v2: strukturert, lokal lagring med skjema 2
+- Stabile ID-er for lag og spillere, uavhengig av navn og draktnummer
+- Egen oversikt over lag, kamper, kamphendelser og aktiv kamp
+- Automatisk overføring fra versjon 44 ved første oppstart
+
+KOMPATIBILITET
+- De gamle lagringsnøklene blir bevart og oppdatert parallelt:
+  trenerbrettet-7er-v6 og trenerbrettet-match-reports-v1
+- Gjenoppretting av gamle sikkerhetskopier (schema 1) støttes.
+- Nye sikkerhetskopier (schema 2) tar også med den nye lagringsstrukturen.
+- Manglende gammel kampstatus eller rapportnøkkel kan gjenopprettes fra
+  den nye strukturen når dataene finnes der.
+
+BEGRENSNINGER
+- Fortsatt bare lokal lagring i samme nettleser/enhet.
+- Ingen innlogging, delt lagtilgang eller synkronisering enda.
+- Eldre rapporter uten sikker spilleridentitet beholdes med playerId=null,
+  slik at vi ikke gjetter feil person ut fra navn og nummer.
+- Lokal lagring kan slettes ved rydding av nettleserdata.
+- Vi anbefaler å eksportere en sikkerhetskopi foer oppdatering.

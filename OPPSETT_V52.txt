@@ -1,0 +1,32 @@
+TRENERBRETTET V52 – DELTE LAG
+
+FORUTSETNINGER
+- V50 SQL er allerede kjort i Supabase.
+- Brukerne logger inn med personlig e-postadresse.
+- Sikkerhetskopier eksisterende lokale data før du oppdaterer.
+
+INSTALLASJON
+1. Aapne Supabase -> SQL Editor -> New query.
+2. Kopier ALT fra SUPABASE_SETUP_V52.sql, lim inn og trykk Run.
+   Det er en utvidelse av V50, ikke en ny database. Ingen tidligere lag slettes.
+3. Pakk ut ZIP-filen og publiser appfilene i samme Netlify-prosjekt.
+4. Logg inn -> Min konto -> Se lag i skyen.
+5. Klikk «Trenere / deling» ved et lag, skriv inn e-postadresse og opprett invitasjon.
+6. Inviterte trenere maa aapne Trenerbrettet og logge inn med akkurat samme e-postadresse.
+7. De velger «Min konto» -> «Mine invitasjoner» -> «Godta invitasjon».
+8. Deretter -> «Se lag i skyen» -> «Hent til telefon».
+
+VIKTIG
+- Invitasjonen SENDES IKKE automatisk pa e-post. Del beskjeden manuelt med treneren.
+- Det er lagadministrator som inviterer / fjerner trenere.
+- Inviterte trenere kan se og manuelt hente samme spillerstall. De kan ogsaa manuelt laste opp
+  oppdaterte spillerstaller, men dette erstatter spillerstallen i skyen for det laget.
+- To trenere kan fremdeles overskrive hverandres manuelle opplastinger. Koordiner redigeringen.
+- Ingen automatisk synkronisering; kamper/rapporter lagres bare lokalt.
+- Brukeren maa bekrefte e-postadressen; SQL kontrollerer dette ved innlosing av invitasjon.
+- Ingen hemmelige tjenestenokler ligger i webappen.
+
+TEST
+Test med to ulike e-postkontoer. Invitert trener skal se det delte laget, men IKKE andre lag
+vedkommende ikke er medlem av. Test at treneren kan hentes spillerstall, og at administrator
+kan fjerne tilgang. Ikke bruk ekte barnedata i forste test.

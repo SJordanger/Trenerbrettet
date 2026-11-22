@@ -1,0 +1,1 @@
+Trenerbrettet v62: 11-er med midtstopper (CB) adskilt fra venstreback (LB) og høyreback (RB). Tre midtstoppere står sentralt, med en midtstilt og en på hver side. Sentral midtbane, defensiv og offensiv midtbane bruker symmetrisk plassering ved 1, 2 eller 3 spillere. LB/CB/RB/WB registreres alle som F. Ingen ny SQL.

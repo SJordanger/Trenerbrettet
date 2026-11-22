@@ -1,0 +1,9 @@
+Trenerbrettet versjon 54 – Administrasjon og klargjøring av spillformer
+
+Ny side: Innstillinger på startsiden. Administrer lag, trenerroller, invitasjoner og medlemskap med eksisterende Supabase-RPC-er fra v52. SQL eller databaseendringer er ikke nødvendig.
+
+Under Innstillinger vises spillformkonfigurasjon for 3-, 5-, 7-, 9- og 11-er, men kun 7-er kan spilles. Spillformene er beskrevet i game-formats.js. Formasjon, antall spillere og kampmotor for nye baner må bygges og testes separat. Standard spilletider er redigerbare forslag, spesielt for turneringer og ulike aldersklasser.
+
+Synkronisering fra v53 er uendret. Test versjon 53 mellom trenerne før oppgradering. Ta lokal sikkerhetskopi.
+
+Publisering: Pakkens filer skal ligge i rot på Netlify. Publiser ZIP via Deploys.

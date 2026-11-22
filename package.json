@@ -1,0 +1,1 @@
+{"name":"trenerbrettet-v85","version":"85.0.0","private":true,"dependencies":{"@supabase/supabase-js":"^2.49.0","web-push":"^3.6.7"}}

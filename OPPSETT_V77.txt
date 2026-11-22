@@ -1,0 +1,1 @@
+v77: Kompakt spilleroversikt, redigering ved trykk, sletting med bekreftelse, antall valgte og gjestemarkering. Bygger paa v76.

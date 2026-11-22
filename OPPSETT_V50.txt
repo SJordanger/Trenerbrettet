@@ -1,0 +1,25 @@
+TRENERBRETTET V50 - FASE 3A: MANUELL OVERFORING AV LAG OG SPILLERSTALL
+
+1. Ta sikkerhetskopi av versjon 49: Kampdag -> Kamper -> Sikkerhetskopi -> Last ned kopi.
+2. Supabase Dashboard -> SQL Editor -> New query.
+   Lim inn hele SUPABASE_SETUP_V50.sql og trykk Run.
+   Dette oppretter tabellene profiles, teams, team_members og players,
+   sikkerhetsregler (RLS) og den kontrollerte lagringsfunksjonen tb_save_team_roster.
+   Kjor oppsettet for du tester knappen for overforing.
+3. Last opp hele v50-pakken pa Netlify -> Deploys, pa samme adresse som for.
+4. Apne Trenerbrettet -> Logg inn -> Last opp mine lag.
+   Dette laster opp NAVN, NUMMER, AKTIV I TROPP og POSISJONSNSKER for lagene.
+   Det kreves innlogging, nett og eksplisitt bekreftelse.
+5. Pa en annen telefon: Logg inn med samme konto -> Se lag i skyen ->
+   Hent til telefon. Dette KOPIERER spillerstallen, ikke en aktiv kamp.
+
+VIKTIG:
+- Paagaende kamper, kamphendelser og kamprapporter ligger fortsatt lokalt.
+- Endringer etter siste opplasting blir ikke automatisk synkronisert.
+- Last opp pa nytt for a oppdatere skyen. Dette ERSTATTER skyens spillerstall
+  for det valgte lagets unike ID. Ta en kopi forst.
+- Skyimport endrer ikke laget som er valgt pa kampbrettet og endrer ikke
+  eksisterende kamprapporter.
+- Ikke legg databasepassord eller Supabase secret/service_role i nettappen.
+- Flere trenere pa samme lag aktiveres senere, etter at denne overforingen
+  er verifisert med samme brukerkonto pa to telefoner.

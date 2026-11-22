@@ -1,0 +1,9 @@
+Trenerbrettet v60 – 11-er taktiske posisjoner
+
+Dra utespillere på 11-erbanen til sidene mellom forsvar/midtbane for WB, sentralt mellom forsvar/midtbane for DM, sentralt mellom midtbane/angrep for OM, og på sidene mellom midtbane/angrep for W.
+
+Dra til tomt område, og spillerens taktiske rolle vises ved spillerbrikken. Keeperen er låst.
+
+Formasjon kan velges i listen. Ved egenjustering viser listen Egendefinert. Velg en standardformasjon på nytt for å tilbakestille plasseringene.
+
+Kampstatistikk registrerer egne spilletider for WB, DM, OM og W. Ingen ny SQL nødvendig.

@@ -1,0 +1,1 @@
+Trenerbrettet v58: Retting av 3-erformasjon. 3-er har ingen keeper, så de tre utespillerne teller med i formasjonskontrollen. Valg av 3, 2-1 og 1-1-1 beholdes ved gjenåpning. Øvrige spillformer og skyfunksjoner er videreført.

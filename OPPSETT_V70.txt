@@ -1,0 +1,1 @@
+Trenerbrettet v70: Aktuelle spilleposisjoner (trenerens vurdering) vises som avkrysningsvalg K/F/M/A under Kampdag > Mitt lag > Lag og tropp. Alle fire er valgt som standard for eksisterende spillere uten registrert valg. Endringene lagres på spilleren. Ingen endringer i formasjoner og posisjonering.

@@ -1,0 +1,7 @@
+Trenerbrettet v84: Forhaandsdeling og Web Push.
+1. Kjoer SUPABASE_PUSH_V84.sql i SQL Editor.
+2. Netlify: deploy ZIP som prosjekt med Netlify Functions; installer npm dependencies via Netlify build.
+3. Sett env vars SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, VAPID_PUBLIC_KEY, VAPID_PRIVATE_KEY, VAPID_SUBJECT (mailto:adresse). Ikke legg private noekler i frontend.
+4. Generer VAPID med npx web-push generate-vapid-keys.
+5. Test live lenke foer kamp, deretter varsler paa iPhone installert paa hjemskjerm.
+Push krever aktivt nett. Ingen varsler sendes foer database og servermiljoe er satt opp.

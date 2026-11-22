@@ -1,0 +1,4 @@
+Trenerbrettet v66
+- Innstillinger: Én samlet oversikt for lag, trenere, deling, invitasjoner og synkronisering.
+- Fjernet dobbeltvisning av lag og invitasjoner. Eksisterende funksjoner og lagdata beholdt.
+- Ingen endringer i kampmotor, formasjoner, posisjoner eller innlogging.

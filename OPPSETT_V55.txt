@@ -1,0 +1,2 @@
+Trenerbrettet v55: 9-er aktivert med 1 keeper og 8 utespillere. Formasjoner: 3-4-1, 4-3-1, 3-3-2, 2-4-2. Standard 2x35 min.
+7-er og Supabase-funksjonene beholdes. Bytt spillform før kampstart; minst 9 tilgjengelige spillere kreves. Ingen ny SQL.

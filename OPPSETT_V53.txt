@@ -1,0 +1,22 @@
+TRENERBRETTET V53 - AUTOMATISK SYNKRONISERING AV SPILLERSTALL
+
+1. Ta sikkerhetskopi av eksisterende lag/kamper fra Kampdag -> Kamper -> Sikkerhetskopi.
+2. Supabase -> SQL Editor -> New query. Lim inn hele SUPABASE_SETUP_V53.sql og kjor Run.
+   Forventet svar: Success. No rows returned.
+3. Last opp v53 ZIP som tidligere under Deploys i Netlify.
+4. Logg inn pa begge telefonene og kontroller at samme lag vises.
+5. Endre navn/nummer pa en spiller nar ingen kamp pagar. Vent opptil ca. 20 sekunder,
+   eller ga tilbake til appen for a starte ny synkronisering.
+6. Kontroller endringen pa den andre telefonen. Nar appen er apen og tilkoblet
+   nett, oppdateres spillerstallen automatisk.
+
+VIKTIG:
+- Endringer lastes ikke automatisk fra en telefon midt i en aktiv kamp.
+- Kamprapporter, kampstatistikk og p a g a e n d e kamper lagres fremdeles lokalt.
+- Endringer som gjores uten nett beholdes pa enheten og sendes nar nettet er tilbake.
+- Ved samtidige motstridende endringer stoppes synkronisering. Velg manuelt om
+  skyens eller denne telefonens spillerstall skal beholdes under Min konto.
+- Ikke slett nettleserdata mens lokale endringer fortsatt venter pa opplasting.
+- Oppdater begge trenere til v53: v52's gamle opplastingsfunksjon blir blokkert
+  av databasen for a hindre at gamle appversjoner overskriver nye endringer.
+- SQL-filen inneholder ingen hemmelige n o k l e r.
