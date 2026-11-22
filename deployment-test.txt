@@ -1,0 +1,2 @@
+Trenerbrettet GitHub-to-Netlify deployment test.
+This file is informational and does not change app behavior.
